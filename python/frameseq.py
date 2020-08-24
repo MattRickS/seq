@@ -23,7 +23,7 @@ class Expression(object):
 
     __bool__ = __nonzero__
 
-    def __str__(self):
+    def __repr__(self):
         start, end, step = self.start(), self.end(), self.step()
         if start == end:
             return str(start)
@@ -95,7 +95,7 @@ class Expressions(object):
 
     __bool__ = __nonzero__
 
-    def __str__(self):
+    def __repr__(self):
         return ",".join(map(str, self._expressions))
 
     def __iter__(self):
