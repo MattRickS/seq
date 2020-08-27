@@ -19,7 +19,7 @@ class Sequence(object):
         )
 
     def __str__(self):
-        return "{}{}{}".format(self.prefix + self.format_padding() + self.suffix)
+        return "{}{}{}".format(self.prefix, self.format_padding(), self.suffix)
 
     def __iter__(self):
         return (self[i] for i in self.frames)
